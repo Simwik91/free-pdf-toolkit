@@ -622,47 +622,6 @@
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     }
 
-    footer {
-      margin-top: auto;
-      padding-top: 30px;
-      font-size: 1.1rem;
-      font-weight: 600;
-      color: var(--gray);
-      border-top: 1px solid var(--light-gray);
-      text-align: center;
-      background: white;
-      padding: 30px 20px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .footer-content {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 8px;
-      margin-bottom: 8px;
-      max-width: 100%;
-    }
-
-    .footer-content span {
-      display: inline-block;
-    }
-
-    footer a {
-      color: var(--primary);
-      text-decoration: none;
-      transition: var(--transition);
-      white-space: nowrap;
-      font-weight: 600;
-    }
-
-    footer a:hover {
-      color: var(--secondary);
-      text-decoration: underline;
-    }
-
     .creator-credit {
       font-weight: 500;
       color: var(--dark);
@@ -1029,10 +988,6 @@
         padding: 20px;
       }
 
-      footer {
-        padding: 20px 10px;
-      }
-    }
   </style>
 </head>
 <body>
@@ -1421,8 +1376,6 @@
     </div>
 
     <div class="sister-tools-section">
-      <h2><i class="fas fa-tools"></i> Explore Our Free Tools</h2>
-      <p>All our tools process your data entirely in your browser, ensuring your files are never stored or uploaded, keeping your privacy completely secure.</p>
       <div class="sister-tools-grid">
         <div class="everytool-card sister-tool">
           <i class="fas fa-tools"></i>
@@ -1432,45 +1385,316 @@
             <a href="https://everytool.io" class="everytool-btn">Visit EveryTool.io</a>
           </div>
         </div>
-        
-        <div class="sister-tool">
-          <i class="fas fa-barcode"></i>
-          <h3>Free Barcode Generator</h3>
-          <p>Create custom barcodes for EAN, UPC, Code 128, and more</p>
-          <a href="https://free-ean-maker.com" class="sister-tool-btn" target="_blank" rel="noopener noreferrer">Try Now</a>
-        </div>
-        <div class="sister-tool">
-          <i class="fas fa-qrcode"></i>
-          <h3>Free QR Generator</h3>
-          <p>Create custom QR codes with logos and colors</p>
-          <a href="https://free-qr-maker.com" class="sister-tool-btn" target="_blank" rel="noopener noreferrer">Try Now</a>
-        </div>
-        <div class="sister-tool">
-          <i class="fas fa-image"></i>
-          <h3>Free Image Toolkit</h3>
-          <p>Crop, resize, and convert images in multiple formats</p>
-          <a href="https://free-image-toolkit.com" class="sister-tool-btn" target="_blank" rel="noopener noreferrer">Try Now</a>
-        </div>
-        <div class="sister-tool">
-          <i class="fas fa-video"></i>
-          <h3>Free Video Toolkit</h3>
-          <p>Convert videos to MP4, WEBM, or GIF with advanced settings</p>
-          <a href="https://free-video-toolkit.com" class="sister-tool-btn" target="_blank" rel="noopener noreferrer">Try Now</a>
-        </div>
       </div>
     </div>
+        
+  <!-- Buy Me a Coffee Integration -->
+<style>
+  /* Import Cookie font */
+  @import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
+  
+  /* Floating Button Container - Centered */
+  #bmc-floating {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10001;
+    display: none; /* Hidden by default */
+  }
 
-    <footer>
-      <div class="footer-content">
-        <span>© 2025</span>
-        <a href="https://everytool.io">EveryTool.io</a>
-        <span class="separator">|</span>
-        <a href="/privacy-policy">Privacy Policy</a>
-        <span class="separator">|</span>
-        <a href="#" id="open-settings-footer">Cookie Settings</a>
-      </div>
-    </footer>
+  /* Main Popup Styles */
+  #bmc-popup {
+    display: none;
+    position: fixed;
+    top: 0; 
+    left: 0;
+    width: 100%; 
+    height: 100%;
+    background-color: rgba(0,0,0,0.85);
+    justify-content: center;
+    align-items: center;
+    z-index: 10003;
+  }
+
+  #bmc-popup-content {
+    background: #fff;
+    padding: 50px 40px;
+    border-radius: 20px;
+    text-align: center;
+    max-width: 500px;
+    width: 90%;
+    box-shadow: 0 25px 80px rgba(0,0,0,0.5);
+  }
+
+  #bmc-popup-content h3 {
+    margin: 0 0 20px 0;
+    font-size: 28px;
+    color: #333;
+    font-weight: 600;
+  }
+
+  #bmc-popup-content p {
+    margin: 0 0 40px 0;
+    font-size: 18px;
+    color: #666;
+    line-height: 1.6;
+  }
+
+  .popup-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    width: 100%;
+  }
+
+  /* Super-sized animated BMC button */
+  .super-bmc-btn {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 20px 40px !important;
+    background: linear-gradient(135deg, #5F7FFF, #4a6fe3) !important;
+    color: #ffffff !important;
+    border: 5px solid #000000 !important;
+    border-radius: 15px !important;
+    font-family: 'Cookie', cursive !important;
+    font-size: 32px !important;
+    text-decoration: none !important;
+    cursor: pointer !important;
+    min-width: 280px !important;
+    height: 80px !important;
+    box-shadow: 0 8px 25px rgba(95, 127, 255, 0.4) !important;
+    transition: all 0.4s ease !important;
+    transform: scale(1);
+    animation: gentleWiggle 3s ease-in-out infinite;
+  }
+
+  .super-bmc-btn:hover {
+    background: linear-gradient(135deg, #4a6fe3, #3a5fd8) !important;
+    transform: scale(1.08) !important;
+    box-shadow: 0 12px 35px rgba(95, 127, 255, 0.6) !important;
+    animation: none !important;
+  }
+
+  .super-bmc-btn img {
+    height: 40px !important;
+    margin-right: 15px !important;
+    filter: brightness(0) invert(1);
+  }
+
+  /* Gentle wiggle animation */
+  @keyframes gentleWiggle {
+    0%, 100% {
+      transform: scale(1) rotate(0deg);
+    }
+    25% {
+      transform: scale(1.02) rotate(1deg);
+    }
+    75% {
+      transform: scale(1.02) rotate(-1deg);
+    }
+  }
+
+  /* Later button */
+  .later-btn {
+    padding: 16px 32px;
+    background: #f8f9fa;
+    color: #666;
+    border: 2px solid #e9ecef;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 200px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .later-btn:hover {
+    background: #e9ecef;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+
+  /* Centered floating button (bigger with enhanced animation) */
+  .centered-floating-bmc-btn {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 16px 32px !important;
+    background: linear-gradient(135deg, #5F7FFF, #4a6fe3) !important;
+    color: #ffffff !important;
+    border: 5px solid #000000 !important;
+    border-radius: 15px !important;
+    font-family: 'Cookie', cursive !important;
+    font-size: 26px !important;
+    text-decoration: none !important;
+    cursor: pointer !important;
+    min-width: 220px !important;
+    height: 65px !important;
+    box-shadow: 0 6px 20px rgba(95, 127, 255, 0.4) !important;
+    transition: all 0.3s ease !important;
+    animation: enhancedWiggle 2.5s ease-in-out infinite, pulseGlow 3s ease-in-out infinite;
+  }
+
+  .centered-floating-bmc-btn:hover {
+    background: linear-gradient(135deg, #4a6fe3, #3a5fd8) !important;
+    transform: scale(1.08) !important;
+    box-shadow: 0 10px 30px rgba(95, 127, 255, 0.7) !important;
+    animation: none !important;
+  }
+
+  .centered-floating-bmc-btn img {
+    height: 30px !important;
+    margin-right: 10px !important;
+    filter: brightness(0) invert(1);
+  }
+
+  /* Enhanced wiggle animation */
+  @keyframes enhancedWiggle {
+    0%, 100% {
+      transform: scale(1) rotate(0deg);
+    }
+    15% {
+      transform: scale(1.05) rotate(2deg);
+    }
+    30% {
+      transform: scale(1.03) rotate(-2deg);
+    }
+    45% {
+      transform: scale(1.05) rotate(1.5deg);
+    }
+    60% {
+      transform: scale(1.03) rotate(-1.5deg);
+    }
+    75% {
+      transform: scale(1.04) rotate(1deg);
+    }
+  }
+
+  /* Pulsing glow effect */
+  @keyframes pulseGlow {
+    0%, 100% {
+      box-shadow: 0 6px 20px rgba(95, 127, 255, 0.4);
+    }
+    50% {
+      box-shadow: 0 6px 30px rgba(95, 127, 255, 0.7), 0 0 20px rgba(95, 127, 255, 0.4);
+    }
+  }
+</style>
+
+<!-- Floating Button Container -->
+<div id="bmc-floating"></div>
+
+<!-- Popup Modal (without the duplicate button) -->
+<div id="bmc-popup">
+  <div id="bmc-popup-content">
+    <h3>Before we start…</h3>
+    <p>This tool is <strong>100% free</strong> — no sign-up, no cookies, no servers.<br><br>
+      Your data <strong>stays in your browser.</strong><br><br> A coffee keeps tools like this coming.</p>
+    <div class="popup-buttons">
+      <!-- This will be populated by JavaScript -->
+      <div id="bmc-popup-button-container"></div>
+    
+    <div class="popup-buttons">
+      <!-- This will be populated by JavaScript -->
+      <div id="bmc-popup-button-container"></div>
+      
+      <button id="bmc-popup-close" class="later-btn">
+        Maybe Later
+      </button>
+    </div>
   </div>
+</div>
+
+<script>
+// Wait for full page load
+window.addEventListener('load', function() {
+    initializeBMC();
+});
+
+function initializeBMC() {
+    // Create the BMC button HTML
+    const bmcButtonHTML = `
+        <a href="https://buymeacoffee.com/simwik91" target="_blank" class="super-bmc-btn">
+            <img src="https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg" alt="Coffee cup">
+            Buy me a coffee
+        </a>
+    `;
+
+    // Show popup immediately
+    if (!sessionStorage.getItem('bmcPopupShown')) {
+        const popup = document.getElementById('bmc-popup');
+        const popupButtonContainer = document.getElementById('bmc-popup-button-container');
+        
+        if (popup && popupButtonContainer) {
+            // Add button to popup
+            popupButtonContainer.innerHTML = bmcButtonHTML;
+            
+            setTimeout(() => {
+                popup.style.display = 'flex';
+                sessionStorage.setItem('bmcPopupShown', 'true');
+            }, 1500);
+        }
+    } else {
+        // If popup was already shown, initialize floating button immediately
+        initializeFloatingButton();
+    }
+
+    // Close button functionality
+    const closeButton = document.getElementById('bmc-popup-close');
+    if (closeButton) {
+        closeButton.addEventListener('click', function() {
+            const popup = document.getElementById('bmc-popup');
+            if (popup) {
+                popup.style.display = 'none';
+                initializeFloatingButton();
+            }
+        });
+    }
+
+    // Close popup when clicking outside
+    const popup = document.getElementById('bmc-popup');
+    if (popup) {
+        popup.addEventListener('click', function(e) {
+            if (e.target === popup) {
+                popup.style.display = 'none';
+                initializeFloatingButton();
+            }
+        });
+    }
+}
+
+function initializeFloatingButton() {
+    const floatingContainer = document.getElementById('bmc-floating');
+    
+    // Clear any existing content
+    floatingContainer.innerHTML = '';
+    
+    // Create centered floating button
+    const floatingBtn = document.createElement('a');
+    floatingBtn.href = 'https://buymeacoffee.com/simwik91';
+    floatingBtn.target = '_blank';
+    floatingBtn.className = 'centered-floating-bmc-btn';
+    floatingBtn.innerHTML = `
+        <img src="https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg" alt="Coffee cup">
+        Buy me a coffee
+    `;
+    floatingBtn.title = 'Support my work';
+    
+    floatingContainer.appendChild(floatingBtn);
+    
+    // Show the floating container
+    floatingContainer.style.display = 'block';
+    
+    console.log('Centered Buy Me a Coffee button initialized successfully');
+}
+</script>
 
   <script>
     // Set up PDF.js worker
