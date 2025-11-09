@@ -429,65 +429,6 @@
       font-size: 1rem;
     }
 
-    .uses-section {
-      background: linear-gradient(135deg, #4361ee, #7209b7);
-      color: white;
-      border-radius: var(--border-radius);
-      padding: 40px;
-      margin: 40px auto;
-      box-shadow: var(--box-shadow);
-      text-align: center;
-    }
-
-    .uses-section h2,
-    .uses-section p {
-      color: white !important;
-    }
-
-    .uses-section h2 i {
-      color: white !important;
-    }
-
-    .uses-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-      margin-top: 25px;
-    }
-
-    .use-card {
-      background: rgba(255, 255, 255, 0.1);
-      border-radius: var(--border-radius);
-      padding: 25px;
-      text-align: center;
-      backdrop-filter: blur(5px);
-      transition: var(--transition);
-    }
-
-    .use-card:hover {
-      transform: translateY(-5px);
-      background: rgba(255, 255, 255, 0.15);
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-    }
-
-    .use-card i {
-      font-size: 2.5rem;
-      margin-bottom: 15px;
-      color: white;
-    }
-
-    .use-card h3 {
-      font-size: 1.3rem;
-      margin-bottom: 10px;
-      color: white;
-      font-weight: 500;
-    }
-
-    .use-card p {
-      font-size: 0.95rem;
-      color: rgba(255, 255, 255, 0.85);
-    }
-
     .sister-tools-section {
       margin: 40px auto;
     }
@@ -622,259 +563,6 @@
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     }
 
-    .creator-credit {
-      font-weight: 500;
-      color: var(--dark);
-      font-size: 1rem;
-    }
-
-    #cookie-consent {
-      position: fixed;
-      bottom: 20px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 95%;
-      max-width: 800px;
-      background: white;
-      border-radius: var(--border-radius);
-      box-shadow: 0 5px 30px rgba(0, 0, 0, 0.15);
-      padding: 20px;
-      z-index: 1000;
-      display: none;
-    }
-
-    .cookie-content {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 15px;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .cookie-text {
-      flex: 1;
-      min-width: 300px;
-      color: var(--dark);
-    }
-
-    .cookie-text p {
-      margin-bottom: 10px;
-      font-size: 0.95rem;
-    }
-
-    .cookie-text a {
-      color: var(--primary);
-      text-decoration: none;
-    }
-
-    .cookie-text a:hover {
-      text-decoration: underline;
-    }
-
-    .cookie-buttons {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
-
-    .cookie-btn {
-      padding: 10px 20px;
-      border-radius: 50px;
-      font-weight: 600;
-      cursor: pointer;
-      transition: var(--transition);
-      font-size: 0.9rem;
-      border: none;
-      min-width: 180px;
-    }
-
-    .reject-btn {
-      background: var(--light-gray);
-      color: var(--dark);
-    }
-
-    .reject-btn:hover {
-      background: #e0e0e0;
-    }
-
-    .accept-btn {
-      background: var(--primary);
-      color: white;
-    }
-
-    .accept-btn:hover {
-      background: var(--primary-dark);
-    }
-
-    .cookie-settings-btn {
-      background: transparent;
-      color: var(--gray);
-      text-decoration: underline;
-      border: none;
-      cursor: pointer;
-      padding: 0;
-      margin-top: 10px;
-      font-size: 0.85rem;
-    }
-
-    .cookie-settings-btn:hover {
-      color: var(--dark);
-    }
-
-    #cookie-settings {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.7);
-      display: none;
-      justify-content: center;
-      align-items: center;
-      z-index: 2000;
-    }
-
-    .settings-modal {
-      background: white;
-      border-radius: var(--border-radius);
-      width: 95%;
-      max-width: 600px;
-      max-height: 90vh;
-      overflow-y: auto;
-      padding: 30px;
-      position: relative;
-    }
-
-    .settings-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 20px;
-    }
-
-    .settings-header h2 {
-      font-size: 1.8rem;
-      margin: 0;
-    }
-
-    .close-settings {
-      background: none;
-      border: none;
-      font-size: 1.5rem;
-      cursor: pointer;
-      color: var(--gray);
-      transition: var(--transition);
-    }
-
-    .close-settings:hover {
-      color: var(--dark);
-    }
-
-    .settings-content {
-      margin-bottom: 20px;
-    }
-
-    .cookie-type {
-      margin-bottom: 20px;
-      padding-bottom: 15px;
-      border-bottom: 1px solid var(--light-gray);
-    }
-
-    .cookie-type-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 10px;
-    }
-
-    .cookie-type h3 {
-      margin: 0;
-      font-size: 1.2rem;
-    }
-
-    .cookie-type p {
-      font-size: 0.9rem;
-      color: var(--gray);
-      margin-bottom: 10px;
-    }
-
-    .settings-buttons {
-      display: flex;
-      justify-content: flex-end;
-      gap: 10px;
-    }
-
-    .save-settings {
-      background: var(--primary);
-      color: white;
-      border: none;
-      padding: 10px 25px;
-      border-radius: 50px;
-      font-weight: 600;
-      cursor: pointer;
-      transition: var(--transition);
-    }
-
-    .save-settings:hover {
-      background: var(--primary-dark);
-    }
-
-    .toggle-container {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin: 0.5em 0;
-    }
-
-    .toggle-switch {
-      position: relative;
-      display: inline-block;
-      width: 50px;
-      height: 24px;
-    }
-
-    .toggle-switch input {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      opacity: 0;
-      cursor: pointer;
-      z-index: 1;
-    }
-
-    .slider {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background-color: var(--gray);
-      transition: background-color 0.3s ease;
-      border-radius: 24px;
-    }
-
-    .slider:before {
-      position: absolute;
-      content: "";
-      height: 16px;
-      width: 16px;
-      left: 4px;
-      bottom: 4px;
-      background-color: white;
-      transition: transform 0.3s ease;
-      border-radius: 50%;
-    }
-
-    .toggle-switch input:checked + .slider {
-      background-color: var(--primary);
-    }
-
-    .toggle-switch input:checked + .slider:before {
-      transform: translateX(26px);
-    }
-
     .loading {
       text-align: center;
       padding: 20px;
@@ -920,19 +608,6 @@
         grid-template-columns: 1fr;
       }
 
-      .cookie-content {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .cookie-buttons {
-        width: 100%;
-      }
-
-      .cookie-btn {
-        width: 100%;
-      }
-
       .card {
         padding: 20px;
       }
@@ -945,16 +620,12 @@
         font-size: 1.5rem;
       }
 
-      .guide-section, .uses-section {
+      .guide-section {
         padding: 30px;
       }
 
       .guide-grid {
         grid-template-columns: 1fr;
-      }
-
-      .uses-grid {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       }
 
       .everytool-card {
@@ -984,79 +655,13 @@
         font-size: 1.8rem;
       }
 
-      .guide-section, .uses-section {
+      .guide-section {
         padding: 20px;
       }
-
+    }
   </style>
 </head>
 <body>
-  <!-- Cookie Consent Banner -->
-  <div id="cookie-consent" role="dialog" aria-labelledby="cookie-consent-banner" aria-describedby="cookie-consent-desc">
-    <div class="sr-only" id="cookie-consent-banner">Cookie Consent</div>
-    <div class="cookie-content" id="cookie-consent-desc">
-      <div class="cookie-text">
-        <p>We use cookies to enhance your experience and analyze site traffic. By clicking "Accept All", you consent to our use of cookies. 
-          <a href="/privacy-policy.html" aria-label="Learn more about our Privacy Policy">Learn more</a> in our Privacy Policy.
-        </p>
-        <button class="cookie-settings-btn" id="open-settings" aria-label="Open cookie settings">Cookie Settings</button>
-      </div>
-      <div class="cookie-buttons">
-        <button class="cookie-btn reject-btn" id="reject-cookies" aria-label="Reject non-essential cookies">Reject Non-Essential</button>
-        <button class="cookie-btn accept-btn" id="accept-cookies" aria-label="Accept all cookies">Accept All</button>
-      </div>
-    </div>
-  </div>
-
-  <!-- Cookie Settings Modal -->
-  <div id="cookie-settings" role="dialog" aria-labelledby="cookie-settings-title" aria-describedby="cookie-settings-desc">
-    <div class="settings-modal">
-      <div class="settings-header">
-        <h2 id="cookie-settings-title"><i class="fas fa-cookie-bite"></i> Cookie Settings</h2>
-        <button class="close-settings" id="close-settings" aria-label="Close cookie settings">×</button>
-      </div>
-      <div class="settings-content">
-        <p id="cookie-settings-desc">You can set your preferences for how we and our partners use cookies and similar technologies.</p>
-        
-        <div class="cookie-type">
-          <div class="cookie-type-header">
-            <h3>Essential Cookies</h3>
-            <label class="toggle-switch" for="essential-toggle">
-              <input type="checkbox" id="essential-toggle" checked disabled aria-label="Essential cookies (always enabled, cannot be disabled)" aria-describedby="essential-desc">
-              <span class="slider"></span>
-            </label>
-          </div>
-          <p id="essential-desc">These cookies are necessary for the website to function and cannot be switched off.</p>
-        </div>
-        
-        <div class="cookie-type">
-          <div class="cookie-type-header">
-            <h3>Analytics Cookies</h3>
-            <label class="toggle-switch" for="analytics-toggle">
-              <input type="checkbox" id="analytics-toggle" aria-label="Analytics cookies toggle" aria-describedby="analytics-desc">
-              <span class="slider"></span>
-            </label>
-          </div>
-          <p id="analytics-desc">These cookies allow us to count visits and traffic sources so we can measure and improve the performance of our site.</p>
-        </div>
-        
-        <div class="cookie-type">
-          <div class="cookie-type-header">
-            <h3>Advertising Cookies</h3>
-            <label class="toggle-switch" for="advertising-toggle">
-              <input type="checkbox" id="advertising-toggle" aria-label="Advertising cookies toggle" aria-describedby="advertising-desc">
-              <span class="slider"></span>
-            </label>
-          </div>
-          <p id="advertising-desc">These cookies may be set through our site by our advertising partners to build a profile of your interests.</p>
-        </div>
-      </div>
-      <div class="settings-buttons">
-        <button class="save-settings" id="save-settings" aria-label="Save cookie settings">Save Settings</button>
-      </div>
-    </div>
-  </div>
-
   <div class="container">
     <header>
       <div class="logo">
@@ -1328,53 +933,6 @@
       </div>
     </div>
 
-    <div class="uses-section">
-      <h2><i class="fas fa-lightbulb"></i> Practical Uses for PDF Tools</h2>
-      <p>Explore how our PDF tools can enhance your projects:</p>
-      <div class="uses-grid">
-        <div class="use-card">
-          <i class="fas fa-briefcase"></i>
-          <h3>Business Reports</h3>
-          <p>Merge multiple reports into a single PDF for easy sharing.</p>
-        </div>
-        <div class="use-card">
-          <i class="fas fa-book"></i>
-          <h3>E-book Creation</h3>
-          <p>Combine chapters or convert manuscripts to PDF format.</p>
-        </div>
-        <div class="use-card">
-          <i class="fas fa-file-alt"></i>
-          <h3>Document Archiving</h3>
-          <p>Compress PDFs to save storage space without losing quality.</p>
-        </div>
-        <div class="use-card">
-          <i class="fas fa-envelope"></i>
-          <h3>Email Attachments</h3>
-          <p>Convert documents to PDF for professional email sharing.</p>
-        </div>
-        <div class="use-card">
-          <i class="fas fa-graduation-cap"></i>
-          <h3>Academic Papers</h3>
-          <p>Split large research papers into specific sections.</p>
-        </div>
-        <div class="use-card">
-          <i class="fas fa-images"></i>
-          <h3>Portfolio Creation</h3>
-          <p>Convert your artwork images to PDF to create a portfolio.</p>
-        </div>
-        <div class="use-card">
-          <i class="fas fa-file-image"></i>
-          <h3>Image to PDF</h3>
-          <p>Convert images to PDF for creating portfolios or reports.</p>
-        </div>
-        <div class="use-card">
-          <i class="fas fa-file-contract"></i>
-          <h3>Contract Management</h3>
-          <p>Merge signed contracts into one document for record keeping.</p>
-        </div>
-      </div>
-    </div>
-
     <div class="sister-tools-section">
       <div class="sister-tools-grid">
         <div class="everytool-card sister-tool">
@@ -1600,11 +1158,6 @@
     <div class="popup-buttons">
       <!-- This will be populated by JavaScript -->
       <div id="bmc-popup-button-container"></div>
-    
-    <div class="popup-buttons">
-      <!-- This will be populated by JavaScript -->
-      <div id="bmc-popup-button-container"></div>
-      
       <button id="bmc-popup-close" class="later-btn">
         Maybe Later
       </button>
@@ -1700,18 +1253,6 @@ function initializeFloatingButton() {
     // Set up PDF.js worker
     pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.worker.min.js';
 
-    // Cookie Management Functions
-    const COOKIE_CONSENT_KEY = 'cookieConsent';
-    
-    function getCookiePreferences() {
-      const preferences = localStorage.getItem(COOKIE_CONSENT_KEY);
-      return preferences ? JSON.parse(preferences) : null;
-    }
-    
-    function saveCookiePreferences(preferences) {
-      localStorage.setItem(COOKIE_CONSENT_KEY, JSON.stringify(preferences));
-    }
-    
     // State
     let state = {
       uploadedFiles: {},
@@ -1722,49 +1263,6 @@ function initializeFloatingButton() {
 
     // Initialize the application
     function initialize() {
-      // Cookie consent functionality
-      const cookieConsent = getCookiePreferences();
-      if (!cookieConsent) {
-        document.getElementById('cookie-consent').style.display = 'block';
-      }
-      
-      document.getElementById('accept-cookies').addEventListener('click', function() {
-        saveCookiePreferences({
-          essential: true,
-          analytics: true,
-          advertising: true
-        });
-        document.getElementById('cookie-consent').style.display = 'none';
-      });
-      
-      document.getElementById('reject-cookies').addEventListener('click', function() {
-        saveCookiePreferences({
-          essential: true,
-          analytics: false,
-          advertising: false
-        });
-        document.getElementById('cookie-consent').style.display = 'none';
-      });
-      
-      document.getElementById('open-settings').addEventListener('click', openCookieSettings);
-      document.getElementById('open-settings-footer').addEventListener('click', function(e) {
-        e.preventDefault();
-        openCookieSettings();
-      });
-      
-      document.getElementById('close-settings').addEventListener('click', closeCookieSettings);
-      
-      document.getElementById('save-settings').addEventListener('click', function() {
-        const preferences = {
-          essential: true,
-          analytics: document.getElementById('analytics-toggle').checked,
-          advertising: document.getElementById('advertising-toggle').checked
-        };
-        saveCookiePreferences(preferences);
-        closeCookieSettings();
-        document.getElementById('cookie-consent').style.display = 'none';
-      });
-
       // Set up tab switching
       document.querySelectorAll('.tab').forEach(tab => {
         tab.addEventListener('click', () => switchTab(tab.dataset.tab));
@@ -1825,24 +1323,6 @@ function initializeFloatingButton() {
           updateProcessButtonState('splitFileList');
         });
       }
-    }
-
-    // Open cookie settings
-    function openCookieSettings() {
-      const preferences = getCookiePreferences();
-      if (!preferences) {
-        document.getElementById('analytics-toggle').checked = true;
-        document.getElementById('advertising-toggle').checked = true;
-      } else {
-        document.getElementById('analytics-toggle').checked = preferences.analytics;
-        document.getElementById('advertising-toggle').checked = preferences.advertising;
-      }
-      document.getElementById('cookie-settings').style.display = 'flex';
-    }
-
-    // Close cookie settings
-    function closeCookieSettings() {
-      document.getElementById('cookie-settings').style.display = 'none';
     }
 
     // Switch tabs
