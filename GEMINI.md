@@ -9,6 +9,9 @@ These projects are live domains on the internet.
 
 This context is important for any operations that might affect the live sites.
 
+## Application Logic
+All processing and application logic is handled client-side in the user's browser. There is no server-side component, and no data is ever sent to a server. This ensures user privacy and makes the tools available offline after the initial load.
+
 ## Project Structure Guidelines
 
 To maintain project clarity and ease of navigation, the following structure guidelines should be followed.
@@ -20,7 +23,7 @@ To maintain project clarity and ease of navigation, the following structure guid
     -   `index.html`: The main entry point of the website.
     -   `robots.txt`: Instructions for web crawlers.
     -   `sitemap.xml`: A map of the site for search engines.
-    -   `server.py`: A simple Python script to run a local HTTP server for development.
+    -   `start_server.py`: A simple Python script to run a local HTTP server for development.
 -   **`/css` Folder:** All stylesheets go here, split into modules for maintainability.
 -   **`/js` Folder:** All JavaScript files go here, split into modules for maintainability.
 -   **`/images` Folder:** Contains all image assets.
